@@ -1,0 +1,32 @@
+[
+    {
+        "Segment Name": "Low CLTV",
+        "Definition": "Customers whose predicted profit is in the bottom third of all customers.",
+        "Business Logic": "If a customer\u2019s predicted profit (CLTV) is less than the 33rd percentile of all customers, they are classified as Low CLTV.",
+        "Business Interpretation": "These customers are less likely to generate significant long-term profit. They may buy infrequently or spend very little.",
+        "Recommended Actions": "Limit retention investment. Use low-cost, automated communication channels.",
+        "Marketing Strategy": "Implement highly automated, low-cost email or SMS campaigns focused on driving a single, quick repeat purchase or engagement, leveraging basic segmentation and generic discount offers to minimize marketing spend per customer.",
+        "System Activation": "Used to suppress high-cost acquisition/retention efforts. May be included in A/B tests for upsell tactics.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Medium CLTV",
+        "Definition": "Customers whose predicted profit falls between the 33rd and 66th percentile.",
+        "Business Logic": "If a customer\u2019s predicted profit (CLTV) is between the 33rd and 66th percentile, they are classified as Medium CLTV.",
+        "Business Interpretation": "These customers have average value. They may be occasional buyers who could grow into loyal customers.",
+        "Recommended Actions": "Nurture with value-driven offers. Monitor behavior for signs of churn or growth.",
+        "Marketing Strategy": "Use targeted promotions or personalized recommendations to increase spending.",
+        "System Activation": "Used in lifecycle marketing and retention optimization campaigns.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "High CLTV",
+        "Definition": "Customers whose predicted profit is in the top third of all customers.",
+        "Business Logic": "If a customer\u2019s predicted profit (CLTV) is greater than or equal to the 66th percentile, they are classified as High CLTV.",
+        "Business Interpretation": "These are your most valuable customers. They purchase frequently, spend a lot, and are worth retaining.",
+        "Recommended Actions": "Invest in loyalty, exclusivity, and high-touch service. Prevent churn proactively.",
+        "Marketing Strategy": "Exclusive deals, early access, loyalty points, or personalized communication to reinforce engagement.",
+        "System Activation": "Used in VIP programs, loyalty journeys, retention dashboards, and CAC modeling.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    }
+]

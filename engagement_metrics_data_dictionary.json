@@ -1,0 +1,33 @@
+[
+    {
+        "Metric Name": "DAU (Daily Active Users)",
+        "Definition": "The number of unique users who engaged with the platform on a specific day.",
+        "Business Logic": "Count of unique CustomerIDs with activity on each individual calendar day.",
+        "Business Interpretation": "DAU reflects short-term user activity. It\u2019s crucial for understanding day-to-day platform engagement.",
+        "Recommended Actions": "Use to monitor active user trends, product feature adoption, or short-term retention.",
+        "Marketing Strategy": "Align push/email notifications and content drops with daily active patterns.",
+        "System Activation": "Shown in dashboards, alerts for daily dips/spikes, and short-term experiments.",
+        "Context Period": "Rolling daily aggregation."
+    },
+    {
+        "Metric Name": "MAU (Monthly Active Users)",
+        "Definition": "The number of unique users who engaged with the platform during a 30-day rolling window.",
+        "Business Logic": "Count of distinct CustomerIDs active over a 30-day period ending each day.",
+        "Business Interpretation": "MAU captures longer-term user activity. It's key for understanding overall reach and recurring use.",
+        "Recommended Actions": "Use to track user growth, retention cohorts, and overall user base health.",
+        "Marketing Strategy": "Gauge long-term engagement and align brand or campaign timing with MAU growth.",
+        "System Activation": "Used in investor reports, high-level dashboards, and retention modeling.",
+        "Example Customer Traits": "Interacted with the platform at least once in the last 30 days.",
+        "Context Period": "Rolling 30-day window updated daily."
+    },
+    {
+        "Metric Name": "Stickiness",
+        "Definition": "Ratio of DAU to MAU, showing how often monthly users return daily.",
+        "Business Logic": "Stickiness = DAU / MAU. Expressed as a percentage or decimal.",
+        "Business Interpretation": "Stickiness shows how \u201caddictive\u201d or habit-forming the platform is. Higher = better retention and frequency.",
+        "Recommended Actions": "Benchmark against industry averages. Optimize onboarding and habit loops.",
+        "Marketing Strategy": "Boost sticky behavior with gamification, streaks, daily challenges, or personalized nudges.",
+        "System Activation": "Key SaaS and ecommerce metric shown in retention health and growth tracking.",
+        "Context Period": "Daily ratio computed from rolling MAU and daily DAU."
+    }
+]

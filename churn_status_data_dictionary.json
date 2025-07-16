@@ -1,0 +1,23 @@
+[
+    {
+        "Segment Name": "Churned = True",
+        "Definition": "Customers flagged as churned based on recency and business-defined churn window.",
+        "Business Logic": "If `IsChurned = TRUE`, the customer is considered churned. Typically means no purchases within the past 90+ days.",
+        "Business Interpretation": "Customer has become inactive. Likely not to return unless reactivated.",
+        "Recommended Actions": "Optionally send a final win-back or exit survey. Exclude from high-cost marketing.",
+        "Marketing Strategy": "Use low-frequency re-engagement campaigns or exclude entirely.",
+        "System Activation": "Used for suppression lists, churn analysis, and lifecycle disengagement.",
+        "Example Customer Traits": "No purchases in 90+ days, no activity on site/app."
+    },
+    {
+        "Segment Name": "Churned = False ",
+        "Definition": "Customers who are still considered active or re-engaged.",
+        "Business Logic": "If `IsChurned = FALSE`, the customer is still active based on recent purchases (within last 90 days).",
+        "Business Interpretation": "Customer is still engaged. Should be nurtured and retained.",
+        "Recommended Actions": "Continue lifecycle journeys, product education, or cross-sells.",
+        "Marketing Strategy": "Use full-funnel marketing, loyalty incentives, and upsell paths.",
+        "System Tagging / Logic": "Flagged as `IsChurned = FALSE` where recency is within defined retention window.",
+        "System Activation": "Included in active user segmentation, marketing audiences, loyalty tracking.",
+        "Example Customer Traits": "Recent purchase activity within last month or quarter."
+    }
+]

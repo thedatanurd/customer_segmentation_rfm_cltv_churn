@@ -1,0 +1,32 @@
+[
+    {
+        "Metric Name": "Average Customer AOV",
+        "Definition": "The average amount spent per order by a customer over a defined time period.",
+        "Business Logic": "Total revenue divided by total number of orders from 2010-12-01 to 2012-12-09.",
+        "Business Interpretation": "Indicates average basket size and helps benchmark overall customer value per transaction.",
+        "Recommended Actions": "Use product bundles, volume discounts, or free shipping thresholds to increase AOV.",
+        "Marketing Strategy": "Encourage larger baskets with 'buy more, save more' messaging.",
+        "System Activation": "Used to trigger upsell offers and track campaign impact.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Metric Name": "Total Customers",
+        "Definition": "The total number of unique customers who made a purchase during the period.",
+        "Business Logic": "Count of distinct Customer IDs recorded in transactions from 2010-12-01 to 2012-12-09.",
+        "Business Interpretation": "Helps determine customer base size, acquisition volume, and engagement health.",
+        "Recommended Actions": "Compare with prior periods. Use it to monitor churn, growth, and acquisition efforts.",
+        "Marketing Strategy": "Increase aquistion and use this metric to monitor success of marketing campaigns.",
+        "System Activation": "Drives growth targets.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Metric Name": "Average CLTV Profit",
+        "Definition": "The overall average predicted profit (not revenue) a customer will generate over their lifetime.",
+        "Business Logic": "Estimated from past spending behavior minus cost of goods and servicing, across all the customers from 2010-12-01 to 2012-12-09.",
+        "Business Interpretation": "Helps evaluate long-term value of customer base and segment profitability.",
+        "Recommended Actions": "Retain and aquire high-CLTV segments. Use it for retention, loyalty programs, and prioritization.",
+        "Marketing Strategy": "Tailor loyalty campaigns toward high CLTV groups. Allocate CAC budgets accordingly.",
+        "System Activation": "Feeds customer prioritization models and revenue forecasting in marketing tools.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    }
+]

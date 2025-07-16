@@ -1,0 +1,145 @@
+[
+    {
+        "Segment Name": "Champions / VIPs",
+        "Definition": "Customers who purchased recently, frequently, and spent the most.",
+        "Business Logic": "High recency, high frequency, and high monetary value.",
+        "Business Interpretation": "Your best and most loyal customers. Highest revenue drivers.",
+        "Recommended Actions": "Offer loyalty programs, early access to products, personalized experiences.",
+        "Marketing Strategy": "Treat as VIPs \u2014 send exclusive offers, sneak peeks, loyalty perks.",
+        "System Activation": "Used in VIP workflows, product testing, retention scoring, and referral programs.",
+        "Example Customer Traits": "Shops often, spends a lot, bought recently.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Loyal Customers",
+        "Definition": "Frequent buyers with consistent purchase behavior.",
+        "Business Logic": "High frequency, medium-high monetary, good recency.",
+        "Business Interpretation": "Reliable and returning customers, though not necessarily the top spenders.",
+        "Recommended Actions": "Upsell, cross-sell, show appreciation, request reviews or referrals.",
+        "Marketing Strategy": "Send personalized thank-yous, rewards, and product suggestions.",
+        "System Activation": "Used in loyalty loops, review asks, and campaign lookalike modeling.",
+        "Example Customer Traits": "Shops regularly, steady spend, engaged.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Price Shoppers",
+        "Definition": "Buy infrequently, spend little, mostly during sales.",
+        "Business Logic": "Low frequency, low monetary, any recency.",
+        "Business Interpretation": "Sensitive to pricing. Not loyal or profitable.",
+        "Recommended Actions": "Use price-driven messaging during promos only.",
+        "Marketing Strategy": "Send discounts only during clearance or mega sales. Avoid nurturing.",
+        "System Activation": "Excluded from premium comms. Used in mass-sale ads.",
+        "Example Customer Traits": "Coupon-only, shops once or twice.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Potentially Loyal",
+        "Definition": "Customers who bought multiple times but not yet consistent.",
+        "Business Logic": "Mid recency and frequency, low-medium spend.",
+        "Business Interpretation": "These customers could become loyal if nurtured well.",
+        "Recommended Actions": "Incentivize next purchase, enroll in loyalty program.",
+        "Marketing Strategy": "Send educational content and limited-time incentives.",
+        "System Activation": "Used in nurture flows and onboarding journeys.",
+        "Example Customer Traits": "2–3 purchases, recently active.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "New Customers",
+        "Definition": "Customers who made their first purchase recently.",
+        "Business Logic": "High recency, low frequency, low monetary.",
+        "Business Interpretation": "These are new users. First impression matters most.",
+        "Recommended Actions": "Welcome, onboard, and educate quickly.",
+        "Marketing Strategy": "Trigger welcome emails, product tours, and helpful FAQs.",
+        "System Activation": "Triggers onboarding and welcome flows.",
+        "Example Customer Traits": "Bought once, very recently.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Promising",
+        "Definition": "Customers who bought recently but not much or often.",
+        "Business Logic": "High recency, low frequency and monetary.",
+        "Business Interpretation": "They’re engaged — worth watching and nurturing.",
+        "Recommended Actions": "Send targeted offers, guide next purchase.",
+        "Marketing Strategy": "Use gentle reminders and cross-sell emails.",
+        "System Activation": "Included in re-engagement nudges.",
+        "Example Customer Traits": "New, low spend, maybe exploring.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Needs Attention",
+        "Definition": "Recent drop in engagement or spending.",
+        "Business Logic": "Moderate recency, low frequency or monetary.",
+        "Business Interpretation": "Showed interest before but currently drifting.",
+        "Recommended Actions": "Rekindle interest with offers or content.",
+        "Marketing Strategy": "Use 'We miss you' type campaigns or dynamic retargeting.",
+        "System Activation": "Reactivation flows, discount retargeting.",
+        "Example Customer Traits": "Was active, now slowing.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "About to Sleep",
+        "Definition": "Customers who haven’t bought in a while.",
+        "Business Logic": "Low recency, moderate frequency/spend.",
+        "Business Interpretation": "Risk of churn. Recover before they go dormant.",
+        "Recommended Actions": "Send urgency-based reminders or lapsed campaigns.",
+        "Marketing Strategy": "Use last-chance offers or personalized nudges.",
+        "System Activation": "Included in churn-risk suppression and reminders.",
+        "Example Customer Traits": "Once loyal, now distant.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "At Risk / Dormant",
+        "Definition": "Used to purchase often but haven’t in a long time.",
+        "Business Logic": "Low recency, high past frequency or spend.",
+        "Business Interpretation": "Former high-value customers at risk of full churn.",
+        "Recommended Actions": "Launch win-back campaigns, ask for feedback.",
+        "Marketing Strategy": "Special offers, direct messaging, personalized retention.",
+        "System Activation": "Win-back automation and survey flows.",
+        "Example Customer Traits": "Used to buy a lot, now inactive.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Lost Customers",
+        "Definition": "Haven’t purchased in a long time. Not engaged anymore.",
+        "Business Logic": "Very low recency, frequency, and spend.",
+        "Business Interpretation": "Most churned customers. Low chance of return.",
+        "Recommended Actions": "Optional: send one-off reactivation or feedback request.",
+        "Marketing Strategy": "Avoid spending on high-cost ads. Use minimal retention effort.",
+        "System Activation": "Removed from active targeting and lifecycle comms.",
+        "Example Customer Traits": "Inactive for months or years.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Lost Cheap",
+        "Definition": "Churned customers who were low-value before disengaging.",
+        "Business Logic": "Low across all RFM scores, especially monetary.",
+        "Business Interpretation": "Churned and not worth chasing.",
+        "Recommended Actions": "No investment. Do not reactivate.",
+        "Marketing Strategy": "Exclude from all future campaigns.",
+        "System Activation": "Excluded from CRM, retargeting, and email lists.",
+        "Example Customer Traits": "Low spend, churned early.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Big Spenders",
+        "Definition": "Customers who spend a lot, even if they don’t buy often.",
+        "Business Logic": "High monetary, variable frequency and recency.",
+        "Business Interpretation": "High-value orders. Worth attention even if infrequent.",
+        "Recommended Actions": "Reward based on value, not frequency.",
+        "Marketing Strategy": "Personalize based on ticket size, offer premium content.",
+        "System Activation": "Included in VIP or high-AOV targeting.",
+        "Example Customer Traits": "Buys expensive items, infrequently.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    },
+    {
+        "Segment Name": "Frequent Buyers",
+        "Definition": "High purchase frequency even if total spend is not top-tier.",
+        "Business Logic": "High frequency, mid or low spend.",
+        "Business Interpretation": "Regularly engaged. Potential upsell opportunity.",
+        "Recommended Actions": "Upsell, subscription offers, or loyalty plans.",
+        "Marketing Strategy": "Send reminders, replenishment nudges, and multi-buy offers.",
+        "System Activation": "Used in recurring cadence campaigns and product bundling.",
+        "Example Customer Traits": "Shops often, spends moderate amount.",
+        "Context Period": "2010-12-01 to 2012-12-09"
+    }
+]

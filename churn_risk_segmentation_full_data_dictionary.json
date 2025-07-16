@@ -1,0 +1,46 @@
+[
+    {
+        "Segment Name": "Churned",
+        "Definition": "Customers flagged as churned in the system based on inactivity beyond the churn window.",
+        "Business Logic": "If `IsChurned = TRUE`, the customer is tagged as churned. This typically means they haven\u2019t returned after the full churn risk period (90+ days).",
+        "Business Interpretation": "This group is considered inactive and unlikely to return without a very strong win-back strategy.",
+        "Recommended Actions": "Send one last reactivation campaign or exit survey. Avoid high-budget targeting.",
+        "Marketing Strategy": "Use a final win-back discount or feedback request to understand churn reasons.",
+        "System Activation": "Excluded from loyalty, retargeting, and full-funnel spend. Included in churn analysis.",
+        "Example Customer Traits": "No orders in 90+ days and previously flagged inactive.",
+        "Context Period": "Dynamic based on daily recency and churn flag table."
+    },
+    {
+        "Segment Name": "Low Risk",
+        "Definition": "Active customers who purchased recently, within a healthy ecommerce window.",
+        "Business Logic": "Customers whose days since last purchase is \u2264 30 days (low_risk threshold).",
+        "Business Interpretation": "These customers are currently engaged and on track for retention.",
+        "Recommended Actions": "Continue nurturing through loyalty perks and new product exposure.",
+        "Marketing Strategy": "Use post-purchase flows, upsells, and personalized suggestions.",
+        "System Activation": "Included in loyalty programs, recommendations, and upsell campaigns.",
+        "Example Customer Traits": "Bought within the last month.",
+        "Context Period": "Updated daily from transaction recency model."
+    },
+    {
+        "Segment Name": "Medium Risk",
+        "Definition": "Customers who haven\u2019t purchased recently and may be drifting.",
+        "Business Logic": "Customers whose days since last purchase is \u2264 60 days (medium_risk threshold).",
+        "Business Interpretation": "Starting to show signs of drop-off. They\u2019re still reachable but need engagement.",
+        "Recommended Actions": "Use soft re-engagement: new arrivals, price drops, or restocks.",
+        "Marketing Strategy": "Send reminders, personalized offers, or curated collections.",
+        "System Activation": "Included in re-engagement campaigns, retention dashboards, and lifecycle emails.",
+        "Example Customer Traits": "No orders in the last two month.",
+        "Context Period": "Dynamic assignment via recency thresholds."
+    },
+    {
+        "Segment Name": "High Risk",
+        "Definition": "Customers inactive for a longer time and close to churn cutoff.",
+        "Business Logic": "Customers whose days since last purchase is \u2264 90 days (high_risk threshold).",
+        "Business Interpretation": "These customers are at high risk of churning. Need urgent action.",
+        "Recommended Actions": "Trigger strong win-back offers or survey-based engagement.",
+        "Marketing Strategy": "Send deep discounts, urgency-driven offers, or loyalty reminders.",
+        "System Activation": "Used in win-back automations, churn dashboards, and suppression logic.",
+        "Example Customer Traits": "Haven\u2019t purchased in 3\u20133 months, not responding to regular campaigns.",
+        "Context Period": "Daily update."
+    }
+]
