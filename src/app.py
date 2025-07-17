@@ -3,19 +3,20 @@ from streamlit_option_menu import option_menu
 import charts as c
 import snowflake.connector
 import pandas as pd
-from data_dictonaries import render_data_dictionary_app
+from data_dictionaries import render_data_dictionary_app
 
 # ──────────────────────────────────────────────────────────────────────────────
 # 1. Load Data Function
 # ──────────────────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    user = 'SOLEILDATANURD'
-    password = 'Pookieseun123!'
-    account = 'WR25742.europe-west2.gcp'
-    warehouse = 'COMPUTE_WH'
-    database = 'ANALYTICS'
-    schema = 'RAW'
+    creds = st.secrets["snowflake"]
+    user = creds["user"]
+    password = creds["password"]
+    account = creds["account"]
+    warehouse = creds["warehouse"]
+    database = creds["database"]
+    schema = creds["schema"]
 
     query_customer = "SELECT * FROM MARKETING_MART.MART_CUSTOMER_KPIS_AND_SEGMENTATION"
     query_overall = "SELECT * FROM MARKETING_MART.MART_OVERALL_CUSTOMER_KPIS"
@@ -74,7 +75,7 @@ if selected == 'CLTV Segmentation':
     with col2:
         st.plotly_chart(c.cltv_seg_bar(df_customer), use_container_width=True)
         
-    render_data_dictionary_app("cltv_segmentation_data_dictionary.json")
+    render_data_dictionary_app("data_dictionaries/cltv_segmentation_data_dictionary.json")
     
 elif selected == 'RFM Segmentation':
     st.markdown("<h3 style='text-align: center;'>RFM Segmentation</h3>", unsafe_allow_html=True)
@@ -83,7 +84,7 @@ elif selected == 'RFM Segmentation':
         st.plotly_chart(c.rfm_seg_pie(df_customer), use_container_width=True)
     with col4:
         st.plotly_chart(c.rfm_seg_bar(df_customer), use_container_width=True)
-    render_data_dictionary_app("rfm_segmentation_data_dictionary.json")
+    render_data_dictionary_app("data_dictionaries/rfm_segmentation_data_dictionary.json")
     
 elif selected == 'Churn Risk Segmentation':
     st.markdown("<h3 style='text-align: center;'>Churn Risk Segmentation</h3>", unsafe_allow_html=True)
@@ -93,7 +94,7 @@ elif selected == 'Churn Risk Segmentation':
     with col6:
         st.plotly_chart(c.churn_seg_bar(df_customer), use_container_width=True)
         
-    render_data_dictionary_app("churn_risk_segmentation_full_data_dictionary.json")
+    render_data_dictionary_app("data_dictionaries/churn_risk_segmentation_full_data_dictionary.json")
 
 elif selected == 'Churn Metrics':
     st.markdown("<h2 style='text-align: center;'>Churn Metrics</h2>", unsafe_allow_html=True)
@@ -104,7 +105,7 @@ elif selected == 'Churn Metrics':
         st.plotly_chart(c.churn_flag_pie(df_customer), use_container_width=True)
     with col8: 
         st.plotly_chart(c.churn_flag_bar(df_customer), use_container_width=True)
-    render_data_dictionary_app("churn_status_data_dictionary.json")
+    render_data_dictionary_app("data_dictionaries/churn_status_data_dictionary.json")
 
 elif selected == 'Engagement Metrics':    
     st.markdown("<h3 style='text-align: center;'>Engagement Metrics (DAU/MAU/Stickiness)</h3>", unsafe_allow_html=True)
@@ -151,7 +152,7 @@ elif selected == 'Engagement Metrics':
                 st.plotly_chart(fig_mau, use_container_width=True)
             with col11: 
                 st.plotly_chart(fig_stickiness, use_container_width=True)
-            render_data_dictionary_app('engagement_metrics_data_dictionary.json')
+            render_data_dictionary_app('data_dictionaries/engagement_metrics_data_dictionary.json')
             
 elif selected == 'Overall Customer KPIS':
     st.markdown("<br><br>", unsafe_allow_html=True)
@@ -166,6 +167,6 @@ elif selected == 'Overall Customer KPIS':
         st.markdown(f"<h6 style='text-align: center;'>Average CLTV Profit: {AVERAGE_CLTV_PROFIT:.2f}</h6>", unsafe_allow_html=True)
         
         st.markdown("<br><br>", unsafe_allow_html=True)
-    render_data_dictionary_app("overall_kpis.json")    
+    render_data_dictionary_app("data_dictionaries/overall_kpis.json")    
 else:
             st.warning("Engagement data is not available.")
